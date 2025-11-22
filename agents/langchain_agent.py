@@ -11,7 +11,7 @@ class LangChainAgent:
         if not api_key:
             raise ValueError("GITHUB_TOKEN environment variable is not set. Please set it to use the agent.")
 
-        # Initialize ChatOpenAI for GitHub Models
+    
         self.llm = ChatOpenAI(
             model="gpt-4o",
             api_key=api_key,
@@ -19,7 +19,7 @@ class LangChainAgent:
             temperature=0
         )
         
-        # Define tools for the Orchestrator
+
         self.tools = [
             Tool(
                 name="WeatherAgent",
@@ -33,14 +33,14 @@ class LangChainAgent:
             )
         ]
         
-        # Initialize Memory
+
         self.memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
         
-        # Initialize the Orchestrator Agent
+
         self.agent_executor = initialize_agent(
             tools=self.tools,
             llm=self.llm,
-            agent=AgentType.CONVERSATIONAL_REACT_DESCRIPTION, # Supports chat history
+            agent=AgentType.CONVERSATIONAL_REACT_DESCRIPTION,
             verbose=True,
             handle_parsing_errors=True,
             memory=self.memory
@@ -48,7 +48,6 @@ class LangChainAgent:
 
     def handle_request(self, user_input):
         try:
-            # The Orchestrator decides which tool (sub-agent) to call
             result = self.agent_executor.invoke({"input": user_input})
             return result["output"]
         except Exception as e:
