@@ -118,7 +118,7 @@ def get_places(city_name: str) -> str:
         places = places[:max(5, len(places))]
         
         formatted_places = "\n".join([f"* {place}" for place in places])
-        return f"Here are some places to visit in {city_name}:\n{formatted_places}"
+        return f"Here are some places to visit in {city_name}:\n\n{formatted_places}"
         
     except Exception as e:
         return f"Error fetching places: {e}"
