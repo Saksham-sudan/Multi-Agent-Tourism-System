@@ -1,9 +1,8 @@
-# from agents.parent_agent import ParentAgent
 from agents.langchain_agent import LangChainAgent
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
+
 load_dotenv()
 
 def main():
