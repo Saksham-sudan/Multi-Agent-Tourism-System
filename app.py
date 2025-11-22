@@ -9,12 +9,11 @@ load_dotenv()
 
 st.set_page_config(
     page_title="AI Tourism Assistant",
-    page_icon="🌍",
     layout="centered"
 )
 
 
-st.title("🌍 AI Tourism Assistant")
+st.title("AI Tourism Assistant")
 st.markdown("Your intelligent travel companion powered by AI")
 
 
@@ -56,10 +55,9 @@ if prompt := st.chat_input("Ask me about weather, places to visit, or plan your 
 with st.sidebar:
     st.header("About")
     st.markdown("""
-    This AI Tourism Assistant can help you:
-    - 🌤️ Check weather for any city
-    - 🗺️ Discover tourist attractions
-    - 📝 Plan your trips
+    Created by Saksham Sudan
+    USN-1CR22IS129
+    for Inkle Assignment
     
     **Powered by:**
     - GPT-4o (GitHub Models)
