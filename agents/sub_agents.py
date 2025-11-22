@@ -50,7 +50,7 @@ def create_places_agent():
     )
     return agent
 
-# Wrapper functions to be used as tools by the Orchestrator
+
 
 def ask_weather_agent(query: str) -> str:
     """
