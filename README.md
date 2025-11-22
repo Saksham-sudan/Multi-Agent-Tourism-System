@@ -7,7 +7,7 @@ A multi-agent AI tourism system built with LangChain that helps users plan trips
 
 ## Live Demo
 
-[View Live App on Streamlit Cloud](#) *(multi-agent-tourism-system-7yysesgfr9mowtr3xmeaba.streamlit.app)*
+[View Live App on Streamlit Cloud](https://multi-agent-tourism-system-7yysesgfr9mowtr3xmeaba.streamlit.app)
 
 ## Features
 
@@ -182,3 +182,4 @@ Assignment: Inkle AI Intern Position
 ## Acknowledgments
 
 - Inkle for the assignment opportunity
+
